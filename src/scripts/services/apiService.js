@@ -31,3 +31,19 @@ const mapProduct = data => {
     });
     return productsArray;
 }
+
+const mapSingleProduct = data => {
+    return new Product(
+        data.title, data.thumbnail, data.description,
+        data.brand, data.category, data.price,
+        data.tags, data.reviews, data.rating,
+        data.dimensions, data.weight,
+        data.availabilityStatus, data.returnPolicy,
+        data.id
+    );
+}
+
+export const fetchProductById = async id => {
+    const data = await fetchData(`${URL}/products/${id}`);
+    return mapSingleProduct(data);
+}
