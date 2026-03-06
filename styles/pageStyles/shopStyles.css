@@ -1,0 +1,310 @@
+/* ── Shop Layout ── */
+
+.shop {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+  scroll-margin-top: var(--navbar-height);
+}
+
+
+/* ── Filters ── */
+
+.filters {
+  height: fit-content;
+  border: 1px solid #e8e4dc;
+  border-radius: 6px;
+  padding: 1.25rem;
+  position: sticky;
+  top: calc(var(--navbar-height) + 1rem);
+}
+
+.filters-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1a1a18;
+  margin-bottom: 1rem;
+}
+
+
+/* ── Main Column ── */
+
+.shop-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+/* ── Search Bar ── */
+
+.shop-search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input-wrap {
+  flex: 4;
+  position: relative;
+  min-width: 0;
+  display: flex;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.85rem;
+  border: 1px solid #e8e4dc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search-input-wrap input:focus {
+  border-color: #c8a96e;
+}
+
+.search-input-wrap #clearSearch {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #a0998f;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-input-wrap #clearSearch:hover {
+  color: #1a1a18;
+  background: none;
+}
+
+.shop-search button {
+  padding: 0.5rem 1rem;
+  background: #1a1a18;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.shop-search button:hover {
+  background: #c8a96e;
+}
+
+.shop-search select {
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #e8e4dc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #1a1a18;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.shop-search select:focus {
+  border-color: #c8a96e;
+}
+
+
+/* ── Filter Groups ── */
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e8e4dc;
+}
+
+.filter-group--inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a0998f;
+}
+
+.filter-select {
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #e8e4dc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #1a1a18;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: #c8a96e;
+}
+
+.filter-price-range {
+  min-height: 48px;
+  border: 1px dashed #e8e4dc;
+  border-radius: 4px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+
+/* ── Pagination ── */
+
+.pagination-wrap {
+  min-height: 48px;
+  border-radius: 6px;
+}
+
+
+
+
+
+
+
+.card {
+  border: 1px solid #e8e4dc;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-thumbnail {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  background: #f2f0ec;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.card-brand {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a0998f;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1a1a18;
+  margin: 0;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #6b6b68;
+}
+
+.card-rating-score {
+  font-weight: 600;
+  color: #1a1a18;
+}
+
+.card-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a18;
+  margin-top: 0.25rem;
+}
+
+.card-btn {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.card-btn button {
+  width: 100%;
+  padding: 0.55rem;
+  background: #1a1a18;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.card-btn button:hover {
+  background: #c8a96e;
+}
+
+
+
+
+
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e8e4dc;
+}
+
+.filter-group--inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a0998f;
+}
+
+.filter-select {
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #e8e4dc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #1a1a18;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: #c8a96e;
+}

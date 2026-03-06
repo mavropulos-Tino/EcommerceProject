@@ -1,0 +1,116 @@
+:root {
+  --navbar-height: 60px;
+}
+
+/* ── Navbar ── */
+
+.navbar {
+  border-bottom: 1px solid #e8e4dc;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid #e8e4dc;
+  color: #1a1a18;
+  text-decoration: none;
+  transition: 250ms;
+}
+
+.cart-btn:hover {
+  border-color: #c8a96e;
+  background: rgba(200, 169, 110, 0.08);
+  color: #1a1a18;
+}
+
+.cart-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 17px;
+  height: 17px;
+  background: #c8a96e;
+  color: #fff;
+  font-size: 0.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #fff;
+}
+
+
+/* ── Hero ── */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 100%);
+}
+
+.hero > * {
+  position: relative;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1a1a18;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #6b6b68;
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  padding: 0.7rem 2rem;
+  background: #1a1a18;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background: #c8a96e;
+  color: #fff;
+}
